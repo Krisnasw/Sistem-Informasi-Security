@@ -79,7 +79,7 @@
 						</div>
 
 						<!-- Form inside modal -->
-						<form action="#" role="form">
+						{{ Form::open(array('action' => 'AdminController@Register', 'method' => 'post')) }}
 
 							<div class="modal-body with-padding">
 								<div class="block-inner text-danger">
@@ -90,12 +90,12 @@
 									<div class="row">
 									<div class="col-sm-6">
 										<label>Nama Lengkap</label>
-										<input type="text" placeholder="Sutejo bin Sutarjo" class="form-control">
+										<input type="text" placeholder="Sutejo bin Sutarjo" class="form-control" name="nama">
 									</div>
 
 									<div class="col-sm-6">
 										<label class="control-label">Username</label>
-										<input type="text" placeholder="OutAttacker" class="form-control">
+										<input type="text" placeholder="OutAttacker" class="form-control" name="user">
 									</div>
 									</div>
 								</div>
@@ -104,41 +104,31 @@
 									<div class="row">
 										<div class="col-sm-6">
 											<label>Alamat</label>
-											<input type="text" placeholder="Ring street 12" class="form-control">
+											<input type="text" placeholder="Ring street 12" class="form-control" name="omah">
 										</div>
 
 										<div class="col-sm-6">
 											<label>Password</label>
-											<input type="password" placeholder="*********" class="form-control">
+											<input type="password" placeholder="*********" class="form-control" name="paswot">
 										</div>
 									</div>
-								</div>
-                                
-                                <div class="form-group">
-							        <div class="row">
-                                        <div class="col-sm-12">
-                                            <label>Upload Foto:</label>
-                                            <input type="file" class="styled form-control" id="fotoxxx" name="foto">
-                                            <span class="help-block">Accepted formats: gif, png, jpg. Max file size 2Mb</span>
-                                        </div>
-                                    </div>
 								</div>
 
 								<div class="form-group">
 									<div class="row">
 										<div class="col-sm-4">
 											<label>Kota</label>
-											<input type="text" placeholder="Munich" class="form-control">
+											<input type="text" placeholder="Munich" class="form-control" name="kota">
 										</div>
 
 										<div class="col-sm-4">
 											<label>Provinsi</label>
-											<input type="text" placeholder="Bayern" class="form-control">
+											<input type="text" placeholder="Bayern" class="form-control" name="prov">
 										</div>
 
 										<div class="col-sm-4">
 											<label>Kode Pos</label>
-											<input type="text" placeholder="1031" class="form-control">
+											<input type="text" placeholder="1031" class="form-control" name="pos">
 										</div>
 									</div>
 								</div>
@@ -147,12 +137,12 @@
 									<div class="row">
 										<div class="col-sm-6">
 											<label>Email</label>
-											<input type="text" placeholder="cs@mail.pft" class="form-control">
+											<input type="text" placeholder="cs@mail.pft" class="form-control" name="email">
 										</div>
 
 										<div class="col-sm-6">
 											<label>No. Handphone</label>
-											<input type="text" placeholder="+62-12-3456-7890" data-mask="+99-99-9999-9999" class="form-control">
+											<input type="text" placeholder="+62-12-3456-7890" name="telp" data-mask="+99-99-9999-9999" class="form-control">
 										</div>
 									</div>
 								</div>
@@ -163,7 +153,7 @@
 								<button type="submit" class="btn btn-primary">Submit form</button>
 							</div>
 
-						</form>
+						{!! Form::close() !!}
 					</div>
 				</div>
 			</div>
@@ -179,7 +169,7 @@
 						</div>
 
 						<!-- Form inside modal -->
-						<form action="#" role="form">
+						{{ Form::open(array('action' => 'AdminController@Bugs', 'method' => 'post')) }}
 
 							<div class="modal-body with-padding">
 								<div class="block-inner text-danger">
@@ -190,12 +180,12 @@
 									<div class="row">
 									<div class="col-sm-6">
 										<label>Nama Lengkap</label>
-										<input type="text" placeholder="Sutejo bin Sutarjo" class="form-control">
+										<input type="text" placeholder="Sutejo bin Sutarjo" class="form-control" name="jeneng">
 									</div>
 
 										<div class="col-sm-6">
 											<label>Email</label>
-											<input type="text" placeholder="cs@mail.pft" class="form-control">
+											<input type="email" placeholder="cs@mail.pft" class="form-control" name="mail">
 										</div>
                                                                       
 									</div>
@@ -205,39 +195,38 @@
 									<div class="row">
 										<div class="col-md-6">
                                             <label>Operating system :</label>
-                                            <select data-placeholder="OS yang anda gunakan" class="select-full" tabindex="2">
+                                            <select data-placeholder="OS yang anda gunakan" class="select-full" tabindex="2" name="pil">
                                                 <option value=""></option> 
                                                 <option value="win7">Windows 7</option> 
                                                 <option value="win8">Windows 8</option> 
+												<option value="win10">Windows 10</option>
+												<option value="linux">Linux</option>
                                                 <option value="macos">Mac OS</option> 
-                                                <option value="chromeos">Chrome OS</option> 
+                                                <option value="chromeos">Chrome OS</option>
+												<option value="SteamOS">Steam OS</option>
                                             </select>
                                         </div>
 
 										<div class="col-md-6">
                                             <label>Browser :</label>
-                                            <select data-placeholder="Browser yang anda gunakan" class="select-full" tabindex="2">
+                                            <select data-placeholder="Browser yang anda gunakan" class="select-full" tabindex="2" name="brow">
                                                 <option value=""></option> 
                                                 <option value="chrome">Chrome</option> 
                                                 <option value="firefox">Firefox</option> 
                                                 <option value="opera">Opera</option> 
-                                                <option value="safari">Safari</option> 
+                                                <option value="safari">Safari</option>
+												<option value="ucbrowser">UC Browser</option>
+												<option value="baidu">Baidu</option> 
                                             </select>
                                         </div>
 									</div>
 								</div>
                                 
                                 <div class="form-group">
-							        <div class="row">
-                                        <div class="col-sm-6">
-                                            <label>Upload Screenshot:</label>
-                                            <input type="file" class="styled form-control" id="fotoxxx" name="foto">
-                                            <span class="help-block">Accepted formats: gif, png, jpg. Max file size 2Mb</span>
-                                        </div>
-                                        
+							        <div class="row">                                        
                                         <div class="col-md-6">
                                             <label>Issue type:</label>
-                                            <select data-placeholder="Choose issue type..." class="select-full" tabindex="2">
+                                            <select data-placeholder="Choose issue type..." class="select-full" tabindex="2" name="isu">
                                                 <option value="functionality">Functionality</option> 
                                                 <option value="content">Content</option> 
                                                 <option value="errors">Generic errors</option> 
@@ -249,9 +238,9 @@
 								</div>
                                 
                                 <div class="form-group">
-                                    <label>Additional information:</label>
-                                    <textarea rows="5" cols="5" placeholder="If you want to add any info, do it here." class="elastic form-control"></textarea>
-                                </div>
+                                    <label>Keterangan Bug :</label>
+										<textarea class="editor form-control" placeholder="Enter text ..." name="ket"></textarea>
+								</div>
 							</div>
 
 							<div class="modal-footer">
@@ -259,7 +248,7 @@
 								<button type="submit" class="btn btn-primary">Submit form</button>
 							</div>
 
-						</form>
+						{!! Form::close() !!}
 					</div>
 				</div>
 			</div>

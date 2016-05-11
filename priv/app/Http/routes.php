@@ -23,16 +23,30 @@ Route::post('/login', [
   	'uses' => 'AdminController@postSignIn',
   	'as' => 'login'
   ]);
+  
+Route::post('/login', [
+    'uses' => 'AdminController@Register',
+    'as' => 'register'
+]);
+
+Route::post('/login', [
+    'uses' => 'AdminController@Bugs',
+    'as' => 'bugs'
+]);
 
 Route::get('logout', [
 	'uses' => 'AdminController@Logout',
     'as' => 'welcome'
   ]);
   
-  Route::group(['middleware' => 'auth'], function() {
+  Route::group(['middleware' => ['web', 'auth']], function() {
 
   Route::get('/usr', function() {
-  	return view('index');
+      if (Auth::user()->admin == 1) {
+          return view('admin.index');
+      } else {
+  	    return view('index');
+      }
   });
 
 });

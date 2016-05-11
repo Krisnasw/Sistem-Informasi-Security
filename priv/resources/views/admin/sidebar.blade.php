@@ -45,14 +45,20 @@
 					<li>
 						<a href="#"><span>Laporan</span> <i class="icon-paragraph-justify2"></i></a>
 						<ul>
-							<li><a href="#">Input Laporan</a></li>
+							<li><a href="#">Data Laporan</a></li>
+							<li><a href="#">Cetak Laporan</a></li>
 						</ul>
 					</li>
 					<li>
 						<a href="#"><span>Absensi</span> <i class="icon-clock"></i></a>
 						<ul>
-							<li><a href="#">Absen Masuk</a></li>
-							<li><a href="#">Cek Absensi</a></li>
+							<li><a href="#">Data Absensi</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#"><span>Karyawan</span> <i class="icon-user"></i></a>
+						<ul>
+							<li><a href="#">Data User</a></li>
 						</ul>
 					</li>
 				</ul>

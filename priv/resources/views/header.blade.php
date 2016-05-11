@@ -16,10 +16,10 @@
 
 			<li class="user dropdown">
 				<a class="dropdown-toggle" data-toggle="dropdown">
-					<img src="http://placehold.it/300">
+					{!! Html::image(Auth::user()->foto) !!}
 						@if (Auth::check())
 						<div class="user-info">
-							{{ Auth::user()->name }}<span>{{ Auth::user()->role }}</span>
+							{{ Auth::user()->nama }}
 						</div>
 						@endif
 				</a>
