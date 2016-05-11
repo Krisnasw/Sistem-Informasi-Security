@@ -117,7 +117,7 @@
                                 <div class="form-group">
 							        <div class="row">
                                         <div class="col-sm-12">
-                                            <label>Upload screenshot:</label>
+                                            <label>Upload Foto:</label>
                                             <input type="file" class="styled form-control" id="fotoxxx" name="foto">
                                             <span class="help-block">Accepted formats: gif, png, jpg. Max file size 2Mb</span>
                                         </div>
@@ -230,7 +230,7 @@
                                 <div class="form-group">
 							        <div class="row">
                                         <div class="col-sm-6">
-                                            <label>Upload screenshot:</label>
+                                            <label>Upload Screenshot:</label>
                                             <input type="file" class="styled form-control" id="fotoxxx" name="foto">
                                             <span class="help-block">Accepted formats: gif, png, jpg. Max file size 2Mb</span>
                                         </div>
