@@ -45,7 +45,7 @@
 					<li>
 						<a href="#"><span>Laporan</span> <i class="icon-paragraph-justify2"></i></a>
 						<ul>
-							<li><a href="#">Input Laporan</a></li>
+							<li><a href="{{ url('/usr/addlap') }}">Input Laporan</a></li>
 						</ul>
 					</li>
 					<li>
@@ -55,6 +55,7 @@
 							<li><a href="#">Cek Absensi</a></li>
 						</ul>
 					</li>
+					<li><a href="{{ url('/usr/faq') }}"><span>FAQ's'</span> <i class="icon-bubble6"></i></a></li>
 				</ul>
 				<!-- /main navigation -->
 				

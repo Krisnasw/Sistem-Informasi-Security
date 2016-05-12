@@ -29,7 +29,7 @@
 			<div class="page-header">
 				@if(Auth::check())
 				<div class="page-title">
-					<h3>Dashboard <small>Selamat Datang di Sistem Informasi Security , <b> {{ Auth::user()->name }}</b></small></h3>
+					<h3>Dashboard <small>Selamat Datang di Sistem Informasi Security , <b> {{ Auth::user()->nama }}</b></small></h3>
 				</div>
 				@endif
 

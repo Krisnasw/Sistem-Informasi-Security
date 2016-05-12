@@ -24,12 +24,12 @@ Route::post('/login', [
   	'as' => 'login'
   ]);
   
-Route::post('/login', [
+Route::post('/register', [
     'uses' => 'AdminController@Register',
     'as' => 'register'
 ]);
 
-Route::post('/login', [
+Route::post('/bugs', [
     'uses' => 'AdminController@Bugs',
     'as' => 'bugs'
 ]);
@@ -48,5 +48,20 @@ Route::get('logout', [
   	    return view('index');
       }
   });
+  
+  Route::get('/usr/faq', function() {
+      return view('faq');
+  });
+  
+  Route::get('/usr/addlap', function() {
+      return view('laporan.tambah');
+  });
+  
+  Route::get('/usr/lap', array(
+		'uses' => 'LaporanController@index',
+		'as' => 'laporan.laporan'
+	));
+  
+  Route::resource('lapor', 'LaporanController');
 
 });

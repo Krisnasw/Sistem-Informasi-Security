@@ -45,7 +45,7 @@
 					<li>
 						<a href="#"><span>Laporan</span> <i class="icon-paragraph-justify2"></i></a>
 						<ul>
-							<li><a href="#">Data Laporan</a></li>
+							<li><a href="{{ url('/usr/lap') }}">Data Laporan</a></li>
 							<li><a href="#">Cetak Laporan</a></li>
 						</ul>
 					</li>
